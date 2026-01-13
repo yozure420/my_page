@@ -1,0 +1,32 @@
+.fx{
+    position: relative;
+    a{
+        display: inline-block;
+        transition: transform 0.2s;
+    }
+    a:hover{
+        transform: scale(1.2);
+        display: flex;
+        /* 文字をぐらぐらさせるためのflex */
+    }
+}
+
+.fx::after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 70px;
+    height: 2px;
+    width: 80px;
+    background-color:red;
+    border-radius: 2px;
+}
+.fp::after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 65px;
+    height: 2px;
+    width: 80px;
+    background-color: red;
+}
