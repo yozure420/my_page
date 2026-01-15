@@ -20,6 +20,6 @@ export default defineConfig({
     watch: {
       usePolling: true, // Windows環境などでホットリロードが効かない場合に必要
     },
-    allowedHosts: ["yozure.hal-tokyo-event.com"]
+    allowedHosts: ['yozure.hal-tokyo-event.com']
   },
 })
