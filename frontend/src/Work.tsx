@@ -3,7 +3,7 @@ function Work(){
         <>
         <div className="frame">
             <h1 id="myWorks">My Work</h1>
-            <a href="work.html">・Enter to Shift Enter</a>
+            <a href="work" target="_blank">・Enter to Shift Enter</a>
         </div>
         </>
     );
