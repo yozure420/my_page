@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import Header from './Header.tsx'
-import Profile from './Profile.tsx'
-import Contact from './Contact.tsx'
+// import Header from './Header.tsx'
+// import Profile from './Profile.tsx'
+// import Contact from './Contact.tsx'
 import Work from './Work.tsx'
 
 
@@ -30,24 +30,24 @@ function WorkPage() {
     },[])
 
     return (
-    <>
-    <div>
-        <h1>HERE IS MY WORK PAGE !</h1>
+        <>
+            <div>
+                <h1>HERE IS MY WORK PAGE !</h1>
 
-        <div className="works-container">
-            {works.map((work) => (
-                <div key={work.id} style={{border: '1px solid #ccc', margin: '10px', padding: '10px'}}>
-                    <h3>{work.title || "(タイトルなし)"}</h3>
-                    <p><strong>技術スタック:</strong>{work.tech_stack}</p>
-                    <p><strong>説明:</strong> {work.description}</p>
-                    {work.link_url && <p><a href={work.link_url} target="_blank">リンク</a></p>}
-                    {work.image_path && <img src={work.image_path} alt={work.title} style={{maxWidth: '200px'}} />}
-                    <p><small>作成日時: {new Date(work.created_at).toLocaleString()}</small></p>
+                <div className="works-container">
+                    {works.map((work) => (
+                        <div key={work.id} style={{border: '1px solid #ccc', margin: '10px', padding: '10px'}}>
+                            <h3>{work.title || "(タイトルなし)"}</h3>
+                            <p><strong>技術スタック:</strong>{work.tech_stack}</p>
+                            <p><strong>説明:</strong> {work.description}</p>
+                            {work.link_url && <p><a href={work.link_url} target="_blank">リンク</a></p>}
+                            {work.image_path && <img src={work.image_path} alt={work.title} style={{maxWidth: '200px'}} />}
+                            <p><small>作成日時: {new Date(work.created_at).toLocaleString()}</small></p>
+                        </div>
+                    ))}
                 </div>
-            ))}
-        </div>
-    </div>
-    </>
+            </div>
+        </>
     )
 }
 
